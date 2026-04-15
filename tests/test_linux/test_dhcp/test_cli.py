@@ -1,5 +1,6 @@
 import asyncio
 import signal
+import sys
 from ipaddress import IPv4Address
 
 import pytest
@@ -171,6 +172,7 @@ async def test_exit_timeout(
     assert ips[0].get('address') == ip
 
 
+@pytest.mark.skipif(sys.version_info < (3, 14), reason="Requires Python 3.14+")
 @pytest.mark.parametrize(
     ('signum', 'expected_signal_log', 'expected_state_change'),
     (

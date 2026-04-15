@@ -1,6 +1,12 @@
 Changelog
 =========
 
+* 0.9.6
+    * dhcp: call UNBOUND hook upon NAK <https://github.com/svinota/pyroute2/pull/1436>
+    * ndb: support replacement policies for routes <https://github.com/svinota/pyroute2/pull/1441>
+    * ndb: support localns setup and fix object cache <https://github.com/svinota/pyroute2/issues/1442>
+    * iproute: fix set_netnsid() to be a coroutine <https://github.com/svinota/pyroute2/issues/1454>
+    * ci: drop support for Python < 3.10
 * 0.9.5
     * async: AsyncIPSet, AsyncIPVS, AsyncWiSet
     * ndb: fix snapshot cleanup <https://github.com/svinota/pyroute2/issues/1364>
